@@ -55,7 +55,7 @@ class _MyHomePageState extends State<MyHomePage> {
       print(request.connectionInfo?.remoteAddress);
       request.response
         ..headers.contentType = new ContentType("text", "plain", charset: "utf-8")
-        ..write('Hello, world<br>\n')
+        ..write('Hello, world\n')
         ..write("$_counter")
         ..close();
     }
