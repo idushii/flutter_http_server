@@ -49,7 +49,7 @@ class _MyHomePageState extends State<MyHomePage> {
   late HttpServer server;
 
   startServer() async {
-    server = await HttpServer.bind(InternetAddress.loopbackIPv4, 8080);
+    server = await HttpServer.bind(InternetAddress.anyIPv4, 8080);
     print("Server running on IP : " + server.address.toString() + " On Port : " + server.port.toString());
     await for (var request in server) {
       print(request.connectionInfo?.remoteAddress);
